@@ -5,8 +5,13 @@ import { ScrollToHash } from "./components/ScrollToHash";
 import { Home } from "./pages/Home";
 import { DispatchesIndex } from "./pages/DispatchesIndex";
 import { DispatchArticle } from "./pages/DispatchArticle";
+import { useSystemTheme } from "./hooks/useSystemTheme";
 
 function App() {
+  // Theme is driven by the device's `prefers-color-scheme` setting and
+  // reacts to changes in real time. No in-app toggle.
+  useSystemTheme();
+
   return (
     <BrowserRouter>
       <ScrollToHash />
