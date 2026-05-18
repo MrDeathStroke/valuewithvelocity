@@ -24,12 +24,15 @@ function json(status: number, body: Json) {
 const EMAIL_RX =
   /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
-// FROM defaults to Resend's onboarding sender so this works the moment the
-// API key is set, even before the custom domain is verified in Resend.
-// Once the domain is verified, set RESEND_FROM to a branded address like
-// "VWV Dispatches <dispatches@valuewithvelocity.com>".
+// FROM defaults to Resend's onboarding sender so this works before the
+// custom domain is verified in Resend. In production we set RESEND_FROM to
+// a branded sender on the verified vwv.agency domain.
 const FROM = process.env.RESEND_FROM || "VWV <onboarding@resend.dev>";
-const REPLY_TO = process.env.RESEND_REPLY_TO || "hello@valuewithvelocity.com";
+const REPLY_TO = process.env.RESEND_REPLY_TO || "hello@vwv.agency";
+
+// Base URL used to fetch the hosted SVG logo from the email.
+// Falls back to the production alias if VERCEL_URL is missing.
+const SITE_URL = process.env.SITE_URL || "https://site-pi-tan-76.vercel.app";
 
 export default async function handler(req: Request) {
   if (req.method !== "POST") {
@@ -110,37 +113,102 @@ export default async function handler(req: Request) {
 }
 
 function welcomeHtml() {
+  // Note: email clients strip <svg>, clip-path, and linear-gradient. Use
+  // an <img> pointing at the hosted favicon SVG (which renders fine in
+  // Gmail/Apple Mail/Outlook web). Table-based layout for legacy clients.
+  const logoUrl = `${SITE_URL}/favicon.svg`;
   return `<!doctype html>
 <html lang="en">
-  <body style="margin:0;padding:0;background:#F5F4EF;font-family:Inter,system-ui,sans-serif;color:#0A0A0B;">
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#F5F4EF;padding:48px 24px;">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>You're on the dispatches list.</title>
+  </head>
+  <body style="margin:0;padding:0;background:#F5F4EF;font-family:Helvetica,Arial,sans-serif;color:#0A0A0B;">
+    <!-- Preheader (hidden in body, shown in inbox preview) -->
+    <div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">
+      One cornerstone essay a month. Field notes in between. No noise.
+    </div>
+
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#F5F4EF;padding:40px 16px;">
       <tr>
         <td align="center">
-          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="520" style="background:#FFFFFF;border-radius:12px;border:1px solid #EEEDE6;overflow:hidden;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="560" style="max-width:560px;width:100%;background:#FFFFFF;border-radius:12px;border:1px solid #EEEDE6;overflow:hidden;">
+
+            <!-- Brand row -->
             <tr>
-              <td style="padding:36px 36px 8px 36px;">
-                <div style="display:inline-flex;align-items:center;gap:10px;">
-                  <span style="display:inline-block;width:24px;height:24px;background:linear-gradient(180deg,transparent,#2563EB);clip-path:polygon(12% 12%, 50% 86%, 88% 12%);"></span>
-                  <strong style="font-family:'Geist',Inter,sans-serif;font-weight:600;letter-spacing:-0.02em;">VWV</strong>
-                </div>
-                <h1 style="font-family:'Geist',Inter,sans-serif;font-weight:600;font-size:32px;line-height:1.1;letter-spacing:-0.03em;margin:28px 0 0 0;">
-                  You're on the<br />dispatches list.
+              <td style="padding:32px 36px 8px 36px;">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td style="vertical-align:middle;padding-right:10px;">
+                      <img src="${logoUrl}" width="28" height="28" alt="VWV" style="display:block;border:0;outline:none;text-decoration:none;" />
+                    </td>
+                    <td style="vertical-align:middle;font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:16px;letter-spacing:-0.5px;color:#0A0A0B;">
+                      VWV
+                    </td>
+                    <td style="vertical-align:middle;padding-left:12px;font-family:Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#6C6C75;">
+                      Value With Velocity
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Headline -->
+            <tr>
+              <td style="padding:24px 36px 0 36px;">
+                <h1 style="margin:0;font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:30px;line-height:1.1;letter-spacing:-1.2px;color:#0A0A0B;">
+                  You're on the<br />dispatches list<span style="color:#2563EB;">.</span>
                 </h1>
-                <p style="font-size:16px;line-height:1.6;color:#4A4A52;margin:20px 0 0 0;">
+              </td>
+            </tr>
+
+            <!-- Body -->
+            <tr>
+              <td style="padding:20px 36px 0 36px;">
+                <p style="margin:0;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#4A4A52;">
                   One cornerstone essay a month. Field notes in between. No noise.
                 </p>
-                <p style="font-size:16px;line-height:1.6;color:#4A4A52;margin:16px 0 0 0;">
+                <p style="margin:16px 0 0 0;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#4A4A52;">
                   First piece arrives shortly. If you want to reach a human, just hit reply.
                 </p>
               </td>
             </tr>
+
+            <!-- CTA -->
             <tr>
-              <td style="padding:0 36px 36px 36px;">
-                <p style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#6C6C75;margin:32px 0 0 0;">
+              <td style="padding:28px 36px 0 36px;">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td bgcolor="#0A0A0B" style="border-radius:8px;">
+                      <a href="${SITE_URL}/dispatches" style="display:inline-block;padding:12px 22px;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:600;color:#FAFAF7;text-decoration:none;letter-spacing:-0.2px;">
+                        Read the dispatches →
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Footer rule -->
+            <tr>
+              <td style="padding:32px 36px 28px 36px;">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td height="1" style="font-size:0;line-height:0;background:#EEEDE6;">&nbsp;</td>
+                  </tr>
+                </table>
+                <p style="margin:20px 0 0 0;font-family:Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#6C6C75;">
                   Value With Velocity · Outcome velocity.
+                </p>
+                <p style="margin:8px 0 0 0;font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#6C6C75;">
+                  <a href="${SITE_URL}" style="color:#2563EB;text-decoration:none;">valuewithvelocity.com</a>
+                  &nbsp;·&nbsp;
+                  <a href="https://vwv.agency" style="color:#2563EB;text-decoration:none;">vwv.agency</a>
                 </p>
               </td>
             </tr>
+
           </table>
         </td>
       </tr>

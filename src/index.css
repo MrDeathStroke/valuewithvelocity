@@ -120,6 +120,17 @@ body {
   border-radius: 4px;
 }
 
+/* Browser autofill — keep our colors instead of yellow/blue browser bg */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--color-text-primary);
+  -webkit-box-shadow: 0 0 0 1000px var(--color-canvas-sunken) inset;
+  caret-color: var(--color-text-primary);
+  transition: background-color 9999s ease-in-out 0s;
+}
+
 /* ============================================================
    UTILITIES — brand-specific
    ============================================================ */

@@ -112,8 +112,11 @@ export function AnimatedVMark({
       onMouseEnter={interactive ? () => setHovered(true) : undefined}
       onMouseLeave={interactive ? () => setHovered(false) : undefined}
     >
+    {/* Tightened square viewBox: V occupies x=14..86 (w=72), y=16..82 (h=66).
+        Using a 72x72 box centered vertically removes whitespace so the mark
+        fills its bounding box at any size. */}
     <motion.svg
-      viewBox="0 0 100 100"
+      viewBox="14 13 72 72"
       width={size}
       height={size}
       role="img"

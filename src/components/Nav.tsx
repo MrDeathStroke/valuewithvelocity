@@ -72,17 +72,19 @@ export function Nav() {
           {/* Brand mark */}
           <Link
             to="/"
-            className="group flex items-center gap-2.5 sm:gap-3 text-[color:var(--color-text-primary)]"
+            className="group flex items-center gap-2 sm:gap-2.5 text-[color:var(--color-text-primary)]"
             aria-label="VWV. Value With Velocity"
             onClick={() => setOpen(false)}
           >
-            <span className="text-[color:var(--color-accent)] transition-transform duration-500 group-hover:scale-110">
-              <AnimatedVMark size={26} interval={0} />
+            {/* V mark inherits text-primary so it reads at the same brightness as the wordmark */}
+            <span className="inline-flex items-center text-[color:var(--color-text-primary)] transition-transform duration-500 group-hover:scale-110">
+              <AnimatedVMark size={22} interval={0} />
             </span>
-            <span className="font-display text-[15px] font-semibold tracking-tighter">
+            <span className="font-display text-[17px] font-semibold tracking-tighter leading-none">
               VWV
+              <span className="text-[color:var(--color-accent)]">.</span>
             </span>
-            <span className="hidden sm:inline-block h-3 w-px bg-[color:var(--color-border)]" />
+            <span className="hidden sm:inline-block h-3 w-px bg-[color:var(--color-border)] ml-1.5" />
             <span className="hidden sm:inline-block eyebrow !text-[10px]">
               Value With Velocity
             </span>
