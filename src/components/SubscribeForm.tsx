@@ -47,7 +47,14 @@ export function SubscribeForm() {
   return (
     <div className="min-w-0 w-full">
       <form
-        className="flex flex-col sm:flex-row gap-2 sm:gap-0 sm:rounded-md sm:bg-[color:var(--color-canvas-sunken)] sm:border sm:border-[color:var(--color-border)] sm:focus-within:border-[color:var(--color-accent)] sm:transition-colors"
+        className="
+          flex flex-col sm:flex-row gap-2 sm:gap-0
+          rounded-md bg-[color:var(--color-canvas-sunken)]
+          border border-[color:var(--color-border)]
+          focus-within:border-[color:var(--color-accent)]
+          transition-colors
+          p-1 sm:p-0
+        "
         onSubmit={onSubmit}
         noValidate
       >
@@ -65,13 +72,11 @@ export function SubscribeForm() {
           disabled={disabled || state.kind === "success"}
           aria-label="Email address"
           className="
-            flex-1 min-w-0 h-12 px-4
-            rounded-md sm:rounded-none sm:rounded-l-md
-            bg-[color:var(--color-canvas-sunken)] sm:bg-transparent
-            border border-[color:var(--color-border)] sm:border-0
-            text-[15px] text-[color:var(--color-text-primary)]
+            flex-1 min-w-0 h-11 sm:h-12 px-4
+            bg-transparent border-0
+            text-base sm:text-[15px] text-[color:var(--color-text-primary)]
             placeholder:text-[color:var(--color-text-tertiary)]
-            focus:outline-none focus:border-[color:var(--color-accent)] sm:focus:ring-0
+            focus:outline-none focus:ring-0
             disabled:opacity-60
           "
         />
@@ -79,13 +84,13 @@ export function SubscribeForm() {
           type="submit"
           disabled={disabled || state.kind === "success"}
           className="
-            h-12 px-5 rounded-md sm:rounded-none sm:rounded-r-md
+            h-11 sm:h-10 px-5 rounded
             bg-[color:var(--color-accent)] text-[color:var(--color-accent-fg)]
-            text-sm font-medium tracking-tight
+            text-[15px] sm:text-sm font-medium tracking-tight
             hover:bg-[color:var(--color-accent-hover)] transition-colors
             disabled:opacity-60 disabled:cursor-not-allowed
             inline-flex items-center justify-center gap-2
-            sm:m-1 sm:h-10
+            sm:m-1 whitespace-nowrap
           "
         >
           {state.kind === "loading" && <Spinner />}
@@ -132,9 +137,9 @@ export function SubscribeForm() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.2 }}
-              className="font-mono text-[11px] tracking-widest uppercase text-[color:var(--color-text-tertiary)]"
+              className="font-mono text-[11px] tracking-widest uppercase text-[color:var(--color-text-tertiary)] leading-relaxed"
             >
-              No noise · One email a month · Unsubscribe in one click
+              One email a month · Unsubscribe in one click
             </motion.p>
           )}
         </AnimatePresence>
