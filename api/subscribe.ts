@@ -30,9 +30,9 @@ const EMAIL_RX =
 const FROM = process.env.RESEND_FROM || "VWV <onboarding@resend.dev>";
 const REPLY_TO = process.env.RESEND_REPLY_TO || "hello@vwv.agency";
 
-// Base URL used to fetch the hosted SVG logo from the email.
-// Falls back to the production alias if VERCEL_URL is missing.
-const SITE_URL = process.env.SITE_URL || "https://site-pi-tan-76.vercel.app";
+// Base URL used to fetch the hosted SVG logo from the email and to build
+// in-mail links (CTA + footer). Defaults to the production domain.
+const SITE_URL = process.env.SITE_URL || "https://valuewithvelocity.com";
 
 export default async function handler(req: Request) {
   if (req.method !== "POST") {
