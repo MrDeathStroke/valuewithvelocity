@@ -7,6 +7,276 @@ import type { Dispatch } from "./types";
  */
 export const dispatches: Dispatch[] = [
   {
+    slug: "template-era-ending",
+    kind: "Essay",
+    tag: "Manifesto",
+    date: "2026-05-19",
+    dateLabel: "2026 · 05 · 19",
+    minutes: 14,
+    title: "The template era is ending. What replaces it.",
+    deck:
+      "Salesforce, micro-SaaS, the whole stack of templated tools sold non-tech firms a deal that worked for two decades. That deal is over. Two things broke it. The next decade of operations gets built differently.",
+    body: [
+      {
+        type: "lede",
+        text: "For twenty years, the deal was simple. Non-tech firms paid the template tax. They rented a CRM, an HRMS, a project tool, a marketing platform. They moulded their operations to the template because building their own software was a decade-long project they could not afford. The template won by default. It was the only thing available.",
+      },
+      {
+        type: "p",
+        text: "Look around. The deal is over. Two things broke it and a third changed the shape of who can take advantage.",
+      },
+      { type: "divider" },
+      { type: "h2", text: "The first break: differentiation moved into operations" },
+      {
+        type: "p",
+        text: "Twenty years ago, two companies on the same street ran the same processes. The luxury jeweller on Mirzapur Road did inventory the same way as the one down the lane. The hospitality chain on the highway booked guests the same way as the chain across the road. The supply-chain operator out of Bhiwandi tracked shipments with the same playbook as everyone else in the gali. Sameness was the cost of belonging to a category.",
+      },
+      {
+        type: "p",
+        text: "It is not like that anymore. Two restaurants on the same lane in Lower Parel run wildly different workflows for table turnover, reservation management, supplier negotiation, food-cost tracking, social-media response. One closes books in three days; one takes nine. One reads its own data; one ships reports to a consultant who reads them back. The unique selling proposition moved off the menu and into the operations. Customers can feel the difference even when they cannot name it.",
+      },
+      {
+        type: "callout",
+        label: "The shift",
+        text: "Differentiation used to live on the storefront. Now it lives in the workflow. The template was built for sameness, and sameness no longer wins.",
+      },
+      { type: "h2", text: "The second break: bespoke got cheap" },
+      {
+        type: "p",
+        text: "A custom software build, in 2010, looked like this. Twelve engineers. Eighteen months. A product manager who left halfway. A QA team. A devops engineer who joined month nine. Total cost north of a crore, often two. Most non-tech firms could not justify the bet. They paid the template tax instead.",
+      },
+      {
+        type: "p",
+        text: "The same build, today, looks like this. Four people. Eight weeks. AI agents handle the boilerplate, the integrations, the test scaffolding, the documentation. The team spends time on the parts that actually need taste: the workflow design, the edge cases, the operator hand-off. The economics inverted in five years. Bespoke is now cheaper than the template, faster than the template, and built around the workflow the company actually runs.",
+      },
+      {
+        type: "kpi",
+        rows: [
+          { k: "Cost", v: "Down 70-85% versus a 2010 custom build" },
+          { k: "Time", v: "Eight weeks where eighteen months used to live" },
+          { k: "Fit", v: "Built around the workflow, not vice-versa" },
+        ],
+      },
+      { type: "h2", text: "The third change: who can take the deal" },
+      {
+        type: "p",
+        text: "Here is the catch. Just because bespoke is cheap does not mean non-tech firms can build it themselves. They never developed the in-house capability. Their IT teams maintain SaaS subscriptions and Excel. Their finance teams export CSVs. There is no architecture practice, no eval pipeline, no orchestration layer, no anyone-on-staff who has ever shipped an AI agent that calls tools across the company stack.",
+      },
+      {
+        type: "p",
+        text: "The new deal requires a partner. Specifically, a partner with both sides: business depth to read the workflow correctly, and tech depth to ship the bespoke replacement. That partner is structurally rare. The strategy industry has the first half and not the second. The dev-shop industry has the second half and not the first. Whoever owns both, owns the next decade.",
+      },
+      {
+        type: "callout",
+        label: "The wedge",
+        text: "Bespoke is now cheap. But the buyer cannot build it alone. The market belongs to whoever rejoins strategy and execution under one roof.",
+      },
+      { type: "h2", text: "What the next ten years look like" },
+      {
+        type: "p",
+        text: "The template economy does not disappear. Salesforce will still sell licences. Twelve years from now, a horizontal CRM will still exist for companies whose workflows really are commoditised. But the centre of gravity moves. The companies that win in the next decade are the ones who treat their operations as their own software, not as someone else's product roadmap. They invest in bespoke replacements for the templates that no longer serve them. They hire partners who can deliver both halves of the equation in one sprint.",
+      },
+      {
+        type: "p",
+        text: "Below that line, an entire category of vendor is in trouble. The micro-SaaS that solved one workflow function with a template lacks a moat. The HRMS vendor charging eight dollars per seat per month watches AI-native HR agents deliver the same outcome embedded in the firm's own system, for less, with better fit. The mid-market CRM watches non-tech firms commission their own customer-data platforms because the workflow is now too specific to share.",
+      },
+      {
+        type: "p",
+        text: "We are not predicting the end of SaaS. We are predicting the end of the SaaS template's grip on workflows that should never have been templated. The two are different. The first is a category. The second is a stranglehold.",
+      },
+      { type: "h2", text: "What we built VWV to do" },
+      {
+        type: "p",
+        text: "VWV is built on the bet that the next decade pays partners who own both sides of the work. Strategy and execution in one team, one sprint, one signature. The hackathon-style sprint runs on the client's premises with their major stakeholders in the room. The parallel software cycle ships during the sprint, not after. The deliverable is a bespoke system the client owns, configured against KPIs we signed for on day one.",
+      },
+      {
+        type: "p",
+        text: "We picked the sectors deliberately. Sales-led organisations. Manufacturing. Real estate. Healthcare. Hospitality. Restaurants. Entertainment. Luxury jewellers. Direct-to-consumer ecom. Offline events. Education. Production companies. Supply chain. These are the firms the template era served worst and that AI-built bespoke serves best.",
+      },
+      {
+        type: "p",
+        text: "The template era is ending. The bespoke era replaces it. The firms that get there first will look unfair to the ones that arrive late.",
+      },
+      {
+        type: "signature",
+        text: "Filed under Manifesto. Read next: Process debt is the line nobody measures.",
+      },
+    ],
+  },
+  {
+    slug: "process-debt",
+    kind: "Essay",
+    tag: "Manifesto",
+    date: "2026-05-19",
+    dateLabel: "2026 · 05 · 19",
+    minutes: 11,
+    title: "Process debt is the line nobody measures.",
+    deck:
+      "Every operations team carries it. Almost none measure it. It is the largest unrecorded cost on the P&L of every non-tech firm we have walked into. Here is the term, the definition, and the way to instrument it.",
+    body: [
+      {
+        type: "lede",
+        text: "Technical debt has a name because engineering teams agreed to give it one. Every engineering org tracks it, complains about it, prioritises sprints around it. The shared vocabulary makes the cost visible. Visible costs get managed. Invisible costs do not. Operations teams across non-tech firms carry an equivalent burden and have no shared name for it. We call it process debt. It is the line on the P&L nobody measures.",
+      },
+      { type: "h2", text: "What process debt is" },
+      {
+        type: "p",
+        text: "Process debt is the accumulated weight of workarounds, swivel-chair handoffs, manual reconciliations, undocumented exceptions, and 'we do it this way because Rajesh used to do it that way' that sits inside an operations team. It is the answer to the question: why does this workflow take longer this year than it did last year, even though the volume is the same?",
+      },
+      {
+        type: "p",
+        text: "Some examples we have personally watched accumulate.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Month-end financial close requiring three FTEs to manually reconcile entries across two ERPs because nobody documented the merger integration eighteen months ago.",
+          "A real-estate sales workflow where six brokers email different versions of the same lead spreadsheet to a centralised inbox that nobody owns.",
+          "A hospitality group running three booking systems because each property was acquired separately and nobody has retired the legacy ones.",
+          "A luxury jeweller tracking custom-order specifications on WhatsApp because the CRM does not handle the field structure their artisans need.",
+          "A supply-chain operator manually re-keying data between their TMS and their customer's portal twice a week because the API requires authentication credentials that expired last quarter.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Every one of these costs money. Most of them are uncomplained-about because the people doing the work do not see the alternative. The cost compounds quietly. It is what makes a fast-growing business feel slower every year.",
+      },
+      { type: "h2", text: "Why nobody measures it" },
+      {
+        type: "p",
+        text: "Three structural reasons. First, the cost is distributed across many small workflows, none of which crosses a single threshold large enough to attract executive attention. Second, the cost is paid in time, not cash, and time costs do not show up on the P&L the same way contractor invoices do. Third, the people who feel the cost most directly are operators with no budget authority. The people with budget authority do not feel it.",
+      },
+      {
+        type: "p",
+        text: "The result is a P&L that looks healthy and an organisation that runs progressively slower. Process debt does not show up in the audit report. It shows up in the inability to scale.",
+      },
+      { type: "h2", text: "How to instrument it" },
+      {
+        type: "p",
+        text: "Process debt is invisible by default. To make it visible, you have to pick a workflow and measure three things against it.",
+      },
+      {
+        type: "kpi",
+        rows: [
+          { k: "Cycle time", v: "How long does the workflow take, end to end, today" },
+          { k: "Touch count", v: "How many distinct human interventions does it require" },
+          { k: "Manual error rate", v: "What percentage of work units come back for rework" },
+        ],
+      },
+      {
+        type: "p",
+        text: "Together, these three numbers tell you what the workflow is costing you. Cycle time tells you the velocity tax. Touch count tells you the headcount tax. Manual error rate tells you the quality tax. The product of the three is the process-debt load on that workflow.",
+      },
+      {
+        type: "p",
+        text: "Instrument three or four critical workflows this way and you have an operational dashboard most non-tech firms have never possessed. The first time you run the numbers, the result is usually uncomfortable. Workflows the team had been calling 'fine' turn out to carry six-figure annualised drag. That is the point. Process debt management starts with measurement, because debt that is not measured does not get paid down.",
+      },
+      { type: "h2", text: "How VWV retires it" },
+      {
+        type: "p",
+        text: "A Build sprint is structured around a single workflow's process debt. The first three days on-premises are spent mapping the workflow as it actually runs, not as the org chart says it runs. Touch points get counted. Cycle time gets timed. Error rate gets defined. The baseline is signed before any code ships.",
+      },
+      {
+        type: "p",
+        text: "Then the workflow gets rebuilt around AI orchestration: agents handle the boilerplate decisions, humans handle the boundaries that need judgement, evals run continuously against held-out test cases. The same three numbers get measured against the new workflow. The deltas are what the CFO signs on close-out.",
+      },
+      {
+        type: "p",
+        text: "Process debt is the line nobody measures. We measure it, we retire it, we hand over a dashboard that keeps it from coming back. That is the work.",
+      },
+      {
+        type: "signature",
+        text: "Filed under Manifesto. Read next: The template era is ending.",
+      },
+    ],
+  },
+  {
+    slug: "strategy-execution-split",
+    kind: "Essay",
+    tag: "Manifesto",
+    date: "2026-05-19",
+    dateLabel: "2026 · 05 · 19",
+    minutes: 10,
+    title: "Strategy firms can't ship. Execution firms can't strategise.",
+    deck:
+      "The split is structural. Two industries, two budgets, two KPIs, two buildings. The split is also the largest single source of waste in the consulting market. Here is why it persists, why AI changed the calculus, and what one team that owns both looks like in practice.",
+    body: [
+      {
+        type: "lede",
+        text: "If you are buying advice from a strategy firm and execution from a dev shop, you are paying for two halves of a transaction that should be one. The cost of the split is hidden in the handoff. By the time the strategy reaches the people who have to ship it, the strategy has aged, the budget has been spent on slides, and the dev shop is interpreting a document written by people who will not be in the room when the workflow goes live. The handoff is where value goes to die.",
+      },
+      { type: "h2", text: "Why the split exists" },
+      {
+        type: "p",
+        text: "The split is not stupid. It is structural. Strategy firms were built around partners with two decades of pattern-matching experience and the willingness to bill at four-figure hourly rates. Their economics depend on selling judgement. Execution firms were built around the opposite economics: ratecard pricing, billable utilisation, a workforce trained in delivery against fixed specs. Their economics depend on selling capacity. The two business models are incompatible. So they live in different buildings.",
+      },
+      {
+        type: "p",
+        text: "The buyer pays for the gap. Twice. Once when the strategy is bought. Again when the strategy has to be translated into a brief for the execution firm, which charges by the hour to interpret the brief and ship against it. The total cost of the engagement is the sum of two industries' margins, plus the cost of the translation layer between them, plus the cost of the time lost while everyone catches up to a strategy that was approved months earlier.",
+      },
+      {
+        type: "callout",
+        label: "The hidden cost",
+        text: "The handoff is not free. It is where the strategy ages, the velocity dies, and the budget is spent twice on a single decision.",
+      },
+      { type: "h2", text: "Why the calculus changed" },
+      {
+        type: "p",
+        text: "Three things shifted under our feet. Each one weakened the case for the split.",
+      },
+      {
+        type: "ol",
+        items: [
+          "AI collapsed the delivery cost of execution. A workflow that used to need twelve engineers now needs four. A four-person team can be led by an operator who is also a strategist. The team becomes small enough to be cross-functional by default, not by aspiration.",
+          "Strategy turned into evaluation. Where it used to be 'what should we do' it is now 'which of these three implementations should we ship.' The question collapses if the team that picks the strategy is also the team that builds the prototypes. The strategy becomes the build.",
+          "Non-tech firms started buying outcomes, not slides. The buyer's appetite for paying for a deck and then paying again for the build has dropped. They want the deck and the build under one signature. The split is now actively painful, not merely expensive.",
+        ],
+      },
+      { type: "h2", text: "What one team that owns both looks like" },
+      {
+        type: "p",
+        text: "It looks small. Four to six people, deliberately constant across the sprint. A strategist who can read a workflow and write specs. A technologist who can stand up an orchestration layer in days, not months. A designer who is fluent in operator UX. A producer who keeps the engagement on schedule. Sometimes a domain specialist if the workflow lives inside a regulated space.",
+      },
+      {
+        type: "p",
+        text: "It looks like one signature. The buyer signs a one-page sprint plan that names the workflow, the timebox, the metrics that will move, and the stop-conditions. There is no second contract for the build. The deck and the deployment are the same engagement, billed once.",
+      },
+      {
+        type: "p",
+        text: "It looks like the deck does not exist. There is a sprint plan and there is a deployed system. The slides are written, if at all, after the workflow is live, to document what was built. The team does not stop to render PowerPoint mid-sprint because there is no internal client to update. The buyer is in the room.",
+      },
+      {
+        type: "p",
+        text: "It looks like the same team that mapped the workflow on Monday is the team that ships the rebuilt version on Friday. The judgement and the build share a calendar. The strategy never ages.",
+      },
+      { type: "h2", text: "Why this is hard" },
+      {
+        type: "p",
+        text: "If it were easy, the split would have collapsed already. The reason it is hard is talent. A strategist who can read a workflow at the level a senior partner reads a P&L is rare. An engineer who can ship an AI-orchestrated bespoke workflow in eight weeks is rare. A person who can do both, or a team that can hold both, is rarer still. The strategy industry trains for one half of the work. The execution industry trains for the other. The cross-trained operator does not yet exist in volume.",
+      },
+      {
+        type: "p",
+        text: "VWV's bet is that the cross-trained team is the only team that survives this decade. We do not staff-augment. We do not subcontract the strategy out to one firm and the build out to another. The same people who diagnose the workflow ship the rebuild. The structural integrity of that arrangement is the entire moat.",
+      },
+      {
+        type: "h2",
+        text: "What this means for the buyer",
+      },
+      {
+        type: "p",
+        text: "Three things. First, ask any consulting firm you are evaluating whether they will personally ship the workflow they propose. If the answer is no, you are paying for a handoff. Second, ask any dev shop you are evaluating whether they can re-judge the spec mid-build when reality breaks it. If the answer is no, you are paying for a translation layer. Third, look for the team that can answer yes to both. That team is who you want.",
+      },
+      {
+        type: "p",
+        text: "VWV is built to be that team. The structural innovation is rejoining two professions that should never have separated. Everything else, the sprint model, the calendar booking, the on-premises hackathon, the parallel software cycle, the KPI handover, is method that flows from that one architectural choice.",
+      },
+      {
+        type: "signature",
+        text: "Filed under Manifesto. Read next: The template era is ending.",
+      },
+    ],
+  },
+  {
     slug: "sprints-not-engagements",
     kind: "Essay",
     tag: "Operating model",

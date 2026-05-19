@@ -93,22 +93,22 @@ export function Cta() {
             04
           </span>
           <span className="h-px w-12 bg-[color:var(--color-border)]" />
-          <p className="eyebrow">Start a sprint</p>
+          <p className="eyebrow">From the Mind to the Muscle</p>
         </div>
 
         <h2 className="font-display font-semibold tracking-tightest leading-[0.95] text-[color:var(--color-text-primary)] text-[clamp(2.75rem,8vw,7rem)] text-balance max-w-5xl">
           <span className="block overflow-hidden">
             <span data-cta-line className="block">
-              Stop buying decks.
+              Read here.
             </span>
           </span>
           <span className="block overflow-hidden">
             <span data-cta-line className="block">
-              Start shipping{" "}
+              Ship there{" "}
               <span data-cta-mark className="inline-flex translate-y-1 text-[color:var(--color-accent)]">
                 <AnimatedVMark size={88} interval={4} className="-translate-y-1" />
               </span>{" "}
-              outcomes.
+              .
             </span>
           </span>
         </h2>
@@ -118,18 +118,18 @@ export function Cta() {
           className="mt-16 lg:mt-20 grid gap-12 lg:grid-cols-12 items-end"
         >
           <p className="lg:col-span-7 text-lg lg:text-xl text-[color:var(--color-text-secondary)] text-pretty leading-relaxed max-w-2xl">
-            Book a 30-minute scoping call. We come back with a one-page sprint
-            plan, a fixed price, and the three metrics we will move. Engineered
-            in weeks. Reported in numbers. Owned by you on day one.
+            valuewithvelocity.com is where the thinking lives. vwv.agency is
+            where the work ships. Book a 30-minute intro call. We come back
+            with a one-page sprint plan within 48 hours.
           </p>
 
           <div className="lg:col-span-5 flex flex-col gap-3 lg:items-end">
             <a
               data-cta-row
-              href="mailto:hello@valuewithvelocity.com?subject=Sprint%20scoping%20call"
+              href="https://vwv.agency#book"
               className="group inline-flex items-center justify-between w-full lg:w-auto gap-6 h-14 px-6 rounded-md bg-[color:var(--color-accent)] text-[color:var(--color-accent-fg)] text-base font-medium hover:bg-[color:var(--color-accent-hover)] transition-all duration-300"
             >
-              <span>Book a scoping call</span>
+              <span>Book the intro call</span>
               <svg
                 width="16"
                 height="16"
