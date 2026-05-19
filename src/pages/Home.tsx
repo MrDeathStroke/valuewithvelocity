@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Hero } from "../sections/Hero";
 import { Thesis } from "../sections/Thesis";
+import { OperatingModel } from "../sections/OperatingModel";
 import { Principles } from "../sections/Principles";
 import { Marquee } from "../sections/Marquee";
 import { Dispatches } from "../sections/Dispatches";
@@ -19,6 +20,7 @@ export function Home() {
     <>
       <Hero />
       <Thesis />
+      <OperatingModel />
       <Principles />
       <Marquee />
       <Dispatches />

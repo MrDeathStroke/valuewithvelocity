@@ -47,7 +47,7 @@ export function Dispatches() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <span className="font-mono text-xs text-[color:var(--color-accent)]">
-                03
+                04
               </span>
               <span className="h-px w-12 bg-[color:var(--color-border)]" />
               <p className="eyebrow">Dispatches · long-form thinking</p>

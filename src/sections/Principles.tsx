@@ -69,7 +69,7 @@ export function Principles() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-32 lg:py-40">
         <div className="flex items-center gap-3 mb-12 lg:mb-16">
           <span className="font-mono text-xs text-[color:var(--color-accent)]">
-            02
+            03
           </span>
           <span className="h-px w-12 bg-[color:var(--color-border)]" />
           <p className="eyebrow">Principles · six operating rules</p>
