@@ -103,10 +103,9 @@ export function Hero() {
               data-h-lede
               className="mt-8 max-w-xl text-lg lg:text-xl text-[color:var(--color-text-secondary)] text-pretty leading-relaxed"
             >
-              Strategy firms produce value but cannot ship. Execution firms
-              produce velocity but cannot judge. VWV is built on the bet that
-              one team can do both, and the next decade of non-tech businesses
-              will only be built that way.
+              VWV is a strategy-and-execution studio for non-tech firms. We
+              diagnose process debt, then ship the AI automation that retires
+              it. One team. One sprint. One signature.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-3">
