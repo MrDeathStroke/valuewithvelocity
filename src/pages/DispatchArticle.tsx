@@ -121,21 +121,12 @@ export function DispatchArticle() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.26, ease: [0.16, 1, 0.3, 1] }}
           >
-            <img
-              src="/founder/purvang-portrait-sm.jpg"
-              alt="Purvang Joshi"
-              width="40"
-              height="40"
-              className="h-10 w-10 rounded-full object-cover border border-[color:var(--color-border-subtle)]"
-            />
-            <div>
-              <p className="font-display text-sm font-semibold text-[color:var(--color-text-primary)]">
-                Purvang Joshi
-              </p>
-              <p className="font-mono text-[10px] uppercase tracking-widest text-[color:var(--color-text-tertiary)]">
-                Founder, VWV
-              </p>
-            </div>
+            <span className="font-mono text-[10px] uppercase tracking-widest text-[color:var(--color-text-tertiary)]">
+              Dispatch from
+            </span>
+            <span className="font-display text-sm font-semibold text-[color:var(--color-text-primary)]">
+              VWV
+            </span>
           </motion.div>
         </div>
       </header>
@@ -144,9 +135,6 @@ export function DispatchArticle() {
       <div className="mx-auto max-w-3xl px-6 lg:px-10 py-20 lg:py-28">
         <Body body={dispatch.body} />
       </div>
-
-      {/* Author bio block */}
-      <AuthorBio />
 
       {/* Prev / Next */}
       <PrevNext prev={prev} next={next} />
@@ -325,43 +313,6 @@ function BlockNode({ block }: { block: Block; index: number }) {
     default:
       return null;
   }
-}
-
-function AuthorBio() {
-  return (
-    <section className="border-t border-[color:var(--color-border-subtle)] bg-[color:var(--color-canvas-sunken)]">
-      <div className="mx-auto max-w-3xl px-6 lg:px-10 py-16 lg:py-20">
-        <p className="eyebrow mb-6">Signed by</p>
-        <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-8 items-start">
-          <img
-            src="/founder/purvang-portrait.jpg"
-            alt="Purvang Joshi"
-            width="140"
-            height="140"
-            className="h-28 w-28 sm:h-32 sm:w-32 rounded-md object-cover border border-[color:var(--color-border-subtle)]"
-          />
-          <div>
-            <p className="font-display text-2xl font-semibold tracking-tighter text-[color:var(--color-text-primary)]">
-              Purvang Joshi
-            </p>
-            <p className="font-mono text-[10px] uppercase tracking-widest text-[color:var(--color-text-tertiary)] mt-1">
-              Founder, VWV
-            </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-[color:var(--color-text-secondary)] text-pretty max-w-xl">
-              A decade across technology, consulting, strategy, and AI taught
-              me that value and velocity travel on the same axis, or they
-              don't move at all. Early adopter. Disruption enabler. Stubborn
-              optimist about what AI lets non-tech firms finally build for
-              themselves, instead of renting it from a SaaS template.
-            </p>
-            <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-[color:var(--color-text-tertiary)]">
-              On the ground in Ahmedabad and Mumbai. Working globally.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
 }
 
 function PrevNext({

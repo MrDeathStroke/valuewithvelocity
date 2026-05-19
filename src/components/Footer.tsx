@@ -18,9 +18,9 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-6 max-w-md text-[color:var(--color-text-secondary)] text-pretty">
-              Value and velocity move on the same axis. Long-form thinking
-              from Purvang Joshi on the end of the SaaS-template era,
-              process debt, and the rejoining of strategy with execution.
+              Value and velocity move on the same axis. Long-form thinking on
+              the end of the SaaS-template era, process debt, and the
+              rejoining of strategy with execution.
             </p>
           </div>
 

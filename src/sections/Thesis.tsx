@@ -5,8 +5,7 @@ import { gsap } from "../lib/gsap";
 
 /**
  * The Manifesto section (formerly Thesis).
- * Signed by Purvang. Carries the strategy-vs-execution diagnosis and
- * the wedge statement.
+ * Carries the strategy-vs-execution diagnosis and the wedge statement.
  */
 
 const lines = ["Strategy firms", "produce value", "they cannot ship."];
@@ -143,7 +142,7 @@ export function Thesis() {
             </p>
           </div>
 
-          {/* Founder signature column */}
+          {/* Signature column — VWV institutional voice */}
           <motion.aside
             className="lg:col-span-5 lg:sticky lg:top-28 self-start"
             initial={{ opacity: 0, y: 20 }}
@@ -152,31 +151,17 @@ export function Thesis() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="rounded-lg border border-[color:var(--color-border-subtle)] bg-[color:var(--color-canvas-raised)] p-6 lg:p-8">
-              <div className="flex items-center gap-4">
-                <img
-                  src="/founder/purvang-portrait-sm.jpg"
-                  alt="Purvang Joshi"
-                  width="56"
-                  height="56"
-                  className="h-14 w-14 rounded-full object-cover border border-[color:var(--color-border-subtle)]"
-                />
-                <div>
-                  <p className="font-display text-lg font-semibold tracking-tighter text-[color:var(--color-text-primary)]">
-                    Purvang Joshi
-                  </p>
-                  <p className="font-mono text-[10px] uppercase tracking-widest text-[color:var(--color-text-tertiary)]">
-                    Founder, VWV
-                  </p>
-                </div>
-              </div>
+              <p className="eyebrow !text-[color:var(--color-accent)]">
+                What we believe
+              </p>
 
               <p className="mt-6 text-[15px] leading-relaxed text-[color:var(--color-text-secondary)] text-pretty">
                 A decade across technology, consulting, strategy, and AI
-                taught me that value and velocity travel on the same axis, or
-                they don't move at all. Early adopter. Disruption enabler.
-                Stubborn optimist about what AI lets non-tech firms finally
-                build for themselves, instead of renting it from a SaaS
-                template.
+                taught us that value and velocity travel on the same axis, or
+                they don't move at all. We are early adopters by default,
+                disruption-enablers by craft, stubborn optimists about what
+                AI lets non-tech firms finally build for themselves instead
+                of renting it from a SaaS template.
               </p>
 
               <p className="mt-4 font-mono text-[10px] uppercase tracking-widest text-[color:var(--color-text-tertiary)]">
