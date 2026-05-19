@@ -1,60 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  VWV Open Graph Image — 1200×630
-  For social sharing (LinkedIn, X, Slack, etc.).
-  Deep Navy canvas with Cobalt Velocity Field + wordmark + tagline.
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Carbon canvas -->
+  <rect width="1200" height="630" fill="#0A0A0B"/>
 
-  To export as PNG: open in a browser, use a screenshot tool, or use
-  any SVG-to-PNG converter (cairosvg, Inkscape, Figma export).
--->
-<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VWV — Value With Velocity">
-  <!-- Deep Navy canvas -->
-  <rect x="0" y="0" width="1200" height="630" fill="#0F172A"/>
-
-  <!-- Velocity Field icon (left) -->
-  <defs>
-    <clipPath id="og-mask">
-      <path d="M 130 184 L 230 367 L 330 184 Z"/>
-    </clipPath>
-  </defs>
-  <g clip-path="url(#og-mask)" stroke="#2563EB" stroke-linecap="square">
-    <line x1="60" y1="206" x2="400" y2="206" stroke-width="5"/>
-    <line x1="60" y1="232" x2="400" y2="232" stroke-width="7"/>
-    <line x1="60" y1="258" x2="400" y2="258" stroke-width="9"/>
-    <line x1="60" y1="284" x2="400" y2="284" stroke-width="11"/>
-    <line x1="60" y1="310" x2="400" y2="310" stroke-width="13"/>
-    <line x1="60" y1="336" x2="400" y2="336" stroke-width="15"/>
-    <line x1="60" y1="362" x2="400" y2="362" stroke-width="15"/>
+  <!-- Velocity-field background stripes (very faint) -->
+  <g opacity="0.05">
+    <line x1="60"   y1="0" x2="60"   y2="630" stroke="#FAFAF7" stroke-width="1"/>
+    <line x1="170"  y1="0" x2="170"  y2="630" stroke="#FAFAF7" stroke-width="1"/>
+    <line x1="280"  y1="0" x2="280"  y2="630" stroke="#FAFAF7" stroke-width="1"/>
+    <line x1="390"  y1="0" x2="390"  y2="630" stroke="#FAFAF7" stroke-width="1"/>
+    <line x1="500"  y1="0" x2="500"  y2="630" stroke="#FAFAF7" stroke-width="1"/>
+    <line x1="610"  y1="0" x2="610"  y2="630" stroke="#FAFAF7" stroke-width="1"/>
+    <line x1="720"  y1="0" x2="720"  y2="630" stroke="#FAFAF7" stroke-width="1"/>
+    <line x1="830"  y1="0" x2="830"  y2="630" stroke="#FAFAF7" stroke-width="1"/>
+    <line x1="940"  y1="0" x2="940"  y2="630" stroke="#FAFAF7" stroke-width="1"/>
+    <line x1="1050" y1="0" x2="1050" y2="630" stroke="#FAFAF7" stroke-width="1"/>
+    <line x1="1160" y1="0" x2="1160" y2="630" stroke="#FAFAF7" stroke-width="1"/>
   </g>
 
-  <!-- Wordmark + tagline (right) -->
-  <text x="460" y="280"
-    font-family="Space Grotesk, ui-sans-serif, sans-serif"
-    font-weight="700"
-    font-size="140"
-    letter-spacing="-6"
-    fill="#F5F4EF">VWV</text>
+  <!-- Cobalt edge bloom (radial) -->
+  <defs>
+    <radialGradient id="bloom" cx="50%" cy="100%" r="60%">
+      <stop offset="0%"   stop-color="#2563EB" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bloom)"/>
 
-  <text x="464" y="335"
-    font-family="Space Grotesk, ui-sans-serif, sans-serif"
-    font-weight="500"
-    font-size="28"
-    letter-spacing="-0.5"
-    fill="#2563EB">Measurable value, engineered in weeks.</text>
+  <!-- Velocity-field V mark, left side, large -->
+  <g transform="translate(80, 145) scale(3.4)">
+    <defs>
+      <clipPath id="og-mind-vmask">
+        <path d="M 14 16 L 50 82 L 86 16 Z"/>
+      </clipPath>
+    </defs>
+    <g clip-path="url(#og-mind-vmask)" stroke="#FAFAF7" stroke-linecap="square">
+      <line x1="0" y1="24" x2="100" y2="24" stroke-width="1.5"/>
+      <line x1="0" y1="33" x2="100" y2="33" stroke-width="2"/>
+      <line x1="0" y1="42" x2="100" y2="42" stroke-width="2.5"/>
+      <line x1="0" y1="51" x2="100" y2="51" stroke-width="3"/>
+      <line x1="0" y1="60" x2="100" y2="60" stroke-width="3.5"/>
+      <line x1="0" y1="69" x2="100" y2="69" stroke-width="4"/>
+      <line x1="0" y1="78" x2="100" y2="78" stroke-width="4"/>
+    </g>
+  </g>
 
-  <text x="464" y="372"
-    font-family="Geist Mono, ui-monospace, monospace"
-    font-weight="400"
-    font-size="14"
-    letter-spacing="3"
-    fill="#94A3B8">VALUE WITH VELOCITY · VWV.AGENCY</text>
+  <!-- VWV wordmark + tagline, right side -->
+  <text x="500" y="245" font-family="Geist" font-weight="700" font-size="128" letter-spacing="-7" fill="#FAFAF7">VWV<tspan fill="#60A5FA">.</tspan></text>
 
-  <!-- Bottom-right meta -->
-  <text x="1140" y="600"
-    text-anchor="end"
-    font-family="Geist Mono, ui-monospace, monospace"
-    font-weight="400"
-    font-size="11"
-    letter-spacing="2.5"
-    fill="#64748B">VWV © 2026 · BUILT FOR VELOCITY</text>
+  <text x="500" y="330" font-family="Geist" font-weight="600" font-size="42" letter-spacing="-1.5" fill="#FAFAF7">Value and velocity</text>
+  <text x="500" y="385" font-family="Geist" font-weight="600" font-size="42" letter-spacing="-1.5" fill="#FAFAF7">move on the same axis<tspan fill="#60A5FA">.</tspan></text>
+
+  <text x="500" y="436" font-family="Geist" font-weight="400" font-size="26" letter-spacing="-0.4" fill="#97979F">Or they don't move at all.</text>
+
+  <!-- URL at bottom -->
+  <text x="80" y="588" font-family="Geist Mono" font-weight="500" font-size="16" letter-spacing="3" fill="#97979F">VALUEWITHVELOCITY.COM</text>
+  <text x="1120" y="588" text-anchor="end" font-family="Geist Mono" font-weight="500" font-size="16" letter-spacing="3" fill="#60A5FA">THE MIND</text>
 </svg>
