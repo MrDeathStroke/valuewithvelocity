@@ -93,7 +93,7 @@ export function Cta() {
             04
           </span>
           <span className="h-px w-12 bg-[color:var(--color-border)]" />
-          <p className="eyebrow">From the Mind to the Muscle</p>
+          <p className="eyebrow">Bridge to the agency</p>
         </div>
 
         <h2 className="font-display font-semibold tracking-tightest leading-[0.95] text-[color:var(--color-text-primary)] text-[clamp(2.75rem,8vw,7rem)] text-balance max-w-5xl">

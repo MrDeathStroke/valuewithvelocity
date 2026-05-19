@@ -35,9 +35,9 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* The Muscle */}
+          {/* Cross-link to agency */}
           <div className="lg:col-span-4">
-            <p className="eyebrow mb-4">The other surface</p>
+            <p className="eyebrow mb-4">Want it shipped, not just read?</p>
             <a
               href="https://vwv.agency"
               className="group block rounded-lg border border-[color:var(--color-border-subtle)] hover:border-[color:var(--color-accent)] p-5 transition-colors"
@@ -46,7 +46,7 @@ export function Footer() {
                 vwv.agency
               </p>
               <p className="mt-1 text-sm text-[color:var(--color-text-secondary)]">
-                The Muscle. Productized sprints, fixed price, fixed timebox.
+                Productized sprints, on your premises. AI automation, KPI dashboard at close-out.
               </p>
               <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-[color:var(--color-accent)]">
                 Visit
